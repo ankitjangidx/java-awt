@@ -1,28 +1,36 @@
 import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.Border;
 
+/*method 1 for create a frame as has a relation
 public class Main {
-    private static void createAndShowGUI() {
-        Frame jFrame = new Frame("Hello World Swing Example");
-        // Frame.setLayout(new FlowLayout());
-        jFrame.setSize(500, 360);
-        // jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // JLabel label = new JLabel("Hello World Swing");
-        // Border border = BorderFactory.createLineBorder(Color.BLACK);
-        // label.setBorder(border);
-        // label.setPreferredSize(new Dimension(150, 100));
-
-        // label.setText("Hello World Swing");
-        // label.setHorizontalAlignment(JLabel.CENTER);
-        // label.setVerticalAlignment(JLabel.CENTER);
-
-        // jFrame.add(label);
-        jFrame.setVisible(true);
-    }
+public static void main(String[] args) {
+Frame f=new Frame("first app");
+ }
+}*/
+// method 2
+class Myframe extends Frame{
+Label l;
+TextField tf;
+Button b;
+  public Myframe(){
+    super("my first app");
+    setLayout(new FlowLayout());
     
-  public static void main(String[] args) {
-    createAndShowGUI();
+    l=new Label("name");
+    tf=new TextField(20);
+    b=new Button("ok");
+    add(l);
+    add(b);
+    add(tf);
   }
+  
+  
+  
+}
+  public class Main {
+public static void main(String[] args) {
+Myframe f=new Myframe();
+  f.setSize(400,400);
+  f.setVisible(true);
+ }
+
 }
